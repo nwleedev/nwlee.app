@@ -78,10 +78,10 @@ params:
   widgets:
     enabled:
       - search
-      - posts
+      - archives
       - tag-cloud
 
-    posts:
+    archives:
       limit: 5
 
     tagCloud:
