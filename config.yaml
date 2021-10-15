@@ -65,8 +65,9 @@ params:
       adminLabel:
 
     utterances:
-      repo:
-      issueTerm: pathname
+      repo: quavious/nwlee.app
+      issueTerm: url
+      theme: icy-dark
       label:
 
     remark42:
