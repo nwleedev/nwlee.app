@@ -1,0 +1,79 @@
+/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+* {
+  box-sizing: border-box;
+  line-height: 160%;
+}
+
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('../font/NotoSansKR-Thin.otf');
+  font-weight: 100;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('../font/NotoSansKR-Light.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('../font/NotoSansKR-Regular.otf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('../font/NotoSansKR-Medium.otf');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('../font/NotoSansKR-Bold.otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  src: url('/font/NotoSansKR-Black.otf');
+  font-weight: 900;
+}
+
+:root {
+  --base-font-family: NotoSansKR, sans-serif;
+  --code-font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.container {
+  margin: 0 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 2px 0;
+}
+
+p {
+  margin: 0 !important;
+}
+
+#TableOfContents li > ol {
+  padding-left: 0 !important;
+}
+
+#TableOfContents li {
+  padding-left: 0 !important;
+}
+
+#TableOfContents ol {
+  margin: 0 2px !important;
+}
+
+.article-title,
+.article-subtitle {
+  margin: 0;
+}
+
+.search-label {
+  margin-bottom: 4px;
+}

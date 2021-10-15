@@ -1,0 +1,33 @@
+{{- $query := first 1 (where .Site.Pages "Layout" "==" "posts") -}}
+{{- if $query -}}
+{{- $postsPage := index $query 0 -}}
+<section class="widget archives">
+    <div class="widget-icon">
+        {{ partial "helper/icon" "infinity" }}
+    </div>
+    <h2 class="widget-title section-title">{{ T "widget.posts.title" }}</h2>
+
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+    {{ $posts := $filtered.GroupByDate "2006" }}
+
+    <div class="widget-archive--list">
+        {{ range $index, $item := first (add .Site.Params.widgets.posts.limit 1) ($posts) }}
+        {{- $id := lower (replace $item.Key " " "-") -}}
+        <div class="archives-year">
+            <a href="{{ $postsPage.RelPermalink }}#{{ $id }}">
+                {{ if eq $index $.Site.Params.widgets.posts.limit }}
+                <span class="year">{{ T "widget.posts.more" }}</span>
+                {{ else }}
+                <span class="year">{{ .Key }}</span>
+                <span class="count">{{ len $item.Pages }}</span>
+                {{ end }}
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</section>
+{{- else -}}
+{{- warnf "Archives page not found. Create a page with layout: archives." -}}
+{{- end -}}
