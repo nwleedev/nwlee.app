@@ -14,4 +14,4 @@ draft: false
 
 외부 이미지 렌더링 테스트
 
-<img src="https://nwlee-blog-image-storage.s3.ap-northeast-2.amazonaws.com/public/f30b7b88-d7eb-43c4-a7cd-73627f67d65f.png" loading="lazy">
+<img src="https://d2cr1bcohseazk.cloudfront.net/public/f30b7b88-d7eb-43c4-a7cd-73627f67d65f.png" loading="lazy">
