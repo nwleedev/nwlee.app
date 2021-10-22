@@ -1,42 +1,13 @@
 /* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
 * {
   box-sizing: border-box;
   line-height: 160%;
 }
 
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../font/NotoSansKR-Thin.otf');
-  font-weight: 100;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../font/NotoSansKR-Light.otf');
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../font/NotoSansKR-Regular.otf');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../font/NotoSansKR-Medium.otf');
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('../font/NotoSansKR-Bold.otf');
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'NotoSansKR';
-  src: url('/font/NotoSansKR-Black.otf');
-  font-weight: 900;
-}
-
 :root {
-  --base-font-family: NotoSansKR, sans-serif;
+  --base-font-family: Noto Sans KR, sans-serif;
   --code-font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
