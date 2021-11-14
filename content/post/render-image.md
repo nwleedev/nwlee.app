@@ -14,7 +14,8 @@ draft: false
 
 외부 이미지 렌더링 테스트
 
-<img src="https://static.nwlee.app/public/f30b7b88-d7eb-43c4-a7cd-73627f67d65f.png" loading="lazy">
+<!-- <img src="https://static.nwlee.app/public/f30b7b88-d7eb-43c4-a7cd-73627f67d65f.png" loading="lazy"> -->
+<img src="https://static.nwlee.app/public/KVYH1C00/71f49346-12b3-4d54-a669-d000f07828b6.jpeg" loading="lazy" >
 
 ## 대략적인 과정
 
