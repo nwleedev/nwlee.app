@@ -1,5 +1,5 @@
 ---
-title: '코틀린 메모리 관리'
+title: 'JVM 메모리 관리'
 description:
 date: 2022-01-04T22:48:47+09:00
 image:
