@@ -113,7 +113,7 @@ class Example {
 }
 
 class Person private constructor(
-	val name: String,
+    val name: String,
     val age: Int,
 ) {
     companion object {
@@ -128,7 +128,7 @@ class Person private constructor(
 }
 
 fun main() {
-	val p = Example.value
+    val p = Example.value
     val q = Example.Companion.value
     println("$p $q")
 
