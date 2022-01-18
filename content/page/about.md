@@ -30,7 +30,36 @@ menu:
 
 ## 프로젝트 목록
 
-1. Travelog
+1. Koreanify
+
+한국 내 여행지를 나열 및 소개해주는 안드로이드 애플리케이션
+
+- 제작 동기
+
+  - 부스트캠프에서 배운 코틀린, 안드로이드 개발 지식을 복습하고 개인 프로젝트에 적용하기 위함
+  - 공공데이터포털에서 제공하는 한국관광공사 영문 관광정보 API로 영어권 관광객 대상 여행 정보 애플리케이션을 만들어 보기로 결심
+
+- 프로젝트 기간
+
+  - 2021년 12월 13일 ~ 현재
+
+- 핵심 기술
+
+  - Kotlin, Retrofit2, Gson, Hilt, Coroutine, Shared Preference
+
+- 내용
+
+  - 리사이클러 뷰에서 목록 끝에 도달하면 새로운 데이터를 뷰모델에서 요청 및 업데이트 (무한 스크롤)
+  - 목록 화면에서 항목을 터치하여 상세 화면으로 이동할 때 스크롤 상태 유지. 이미지 깜빡임을 최소화하기 위해 리사이클러 뷰 캐시 설정
+  - Shared Preference에 정렬 방식 저장, 앱을 종료 후 다시 실행해도 정렬 방식을 유지
+  - 상세 화면에서 여행지 상세 정보와 여러 개의 여행지 이미지를 하나의 리사이클러 뷰에 렌더링
+    - 어댑터에서 뷰 타입을 구분할 때 else일 때의 코드 없이 when 문을 작성
+    - 공통되는 봉인 클래스를 하나 정의한 다음 여행지 정보, 여행지 이미지 클래스가 해당 봉인 클래스를 상속
+
+- 링크
+  - [구글 플레이](https://play.google.com/store/apps/details?id=com.nwlee.koreanify)
+
+2. Travelog
 
 여행지를 추천받거나 직접 검색하여 일정을 계획하고 여행 경험을 기록할 수 있는 안드로이드 애플리케이션
 
@@ -61,7 +90,7 @@ menu:
 - 링크
   - [깃허브 저장소](https://github.com/nw-lee/android10-Travelog)
 
-2. Too Much News
+3. Too Much News
 
 - 제작 동기
   - 사회에도 관심을 가지고 싶은데, 언론사가 너무 많아서 어떤 자료를 봐야 할지 모르는 상태.
@@ -84,7 +113,7 @@ menu:
   - [웹 사이트](https://nostalgic-jepsen-e4b338.netlify.app)
   - [깃허브 저장소](https://github.com/nw-lee/too-much-news)
 
-3. Banchan App: 반찬 웹 어플리케이션
+4. Banchan App: 반찬 웹 어플리케이션
 
 - 프로젝트 기간
   - 10월 24일 ~ 현재
@@ -104,7 +133,7 @@ menu:
   - [백엔드 깃허브 저장소](https://github.com/nw-lee/banchan-serverless-api)
   - [프론트엔드 깃허브 저장소](https://github.com/nw-lee/banchan-next)
 
-4. 과학 뉴스 모음
+5. 과학 뉴스 모음
 
 - 제작 동기
   - 과학 지식과 연구 소식에 대한 정보를 편하게 볼 수 있는 방법을 찾음
