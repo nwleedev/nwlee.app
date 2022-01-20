@@ -91,10 +91,85 @@ categories: ['피드백']
 - 코드의 재사용성을 높여준다.
 - 보다 유연한 코드를 작성할 수 있다.
 
+안드로이드 앱 개발을 하면서 클래스 생성자에 의존관계를 주입시키는 방법을 자주 사용했다.
+
 ### Hilt
 
 의존성 주입을 위해 보일러플레이트 코드를 줄일 수 있는 안드로이드 라이브러리이다. 안드로이드 클래스의 수명주기를 자동으로 관리함으로써 애플리케이션의 의존성 주입을 제공할 수 있다.
 
-애플리케이션 클래스에 HiltAndroidApp 어노테이션을 명시함으로써 애플리케이션 레벨의 의존성 컨테이너 역할을 하게 한다. 이후 AndroidEntryPoint 어노테이션이 명시된 다른 안드로이드 클래스에 의존성 주입을 할 수 있다.
+애플리케이션 클래스에 HiltAndroidApp 어노테이션을 명시함으로써 애플리케이션 레벨의 의존성 컨테이너 역할을 하게 한다. 이후 AndroidEntryPoint 어노테이션이 명시된 다른 안드로이드 클래스에 의존성 주입을 할 수 있다. 구성요소 계층 구조에 따라 각자의 상위 클래스에서 의존성 주입 객체를 받는다.
 
-<!-- 추가 필요 -->
+![Hilt 계층 구조](https://static.nwlee.app/public/KYM7JEO0/7d9a22a9-1990-422d-b5f3-4ada346882ed.png)
+
+클래스의 생성자에 Inject 주석으로 클래스를 제공하는 방법을 알려줄 수 있다. 주석이 지정된 매개변수는 클래스의 의존성 객체라고 할 수 있다.
+
+인터페이스 및 외부 라이브러리의 클래스와 같이 생성자에 의존성 제공이 불가능한 경우 Hilt 모듈을 정의하여 Hilt에게 객체를 어떻게 만들어야 하는지 알려줄 수 있다. InstallIn 주석으로 각 모듈을 사용하거나 설치할 안드로이드 클래스를 Hilt에게 알려줘야 한다.
+
+Context가 필요한 경우 ActivityContext와 같은 주석으로 컨텍스트 객체를 의존성 주입할 수 있다.
+
+## 뷰모델 by 키워드
+
+### ViewModelProvider
+
+액티비티 또는 프래그먼트를 뷰모델 인스턴스와 연결할 때 Provider를 사용할 수 있다. ViewModelProvider(this)를 호출하면 현재 액티비티와 연결된 ViewModelProvider 인스턴스를 생성 및 반환한다.
+
+```Kotlin
+class MainActivity : AppCompatActivity() {
+
+  override fun onCreate(savedInstanceState: Bundle?) {
+    setContentView(R.layout.activity_main)
+
+    val provider: ViewModelProvider = ViewModelProvider(this)
+    val imageViewModel = provider.get(ImageViewModel::class.java)
+
+    // ...
+  }
+}
+```
+
+provider의 get 함수를 호출하면 ImageViewModel 인스턴스를 받을 수 있다. 액티비티에서 최초로 ImageViewModel을 요청하면 Provider에서는 새 뷰모델 인스턴스를 생성하고 반환한다. 화면 전환이 발생하면 onDestroy 함수가 발생하여 앱 내 모든 리소스가 초기화되고 전환이 완료되면 액티비티에서는 onCreate 함수를 호출한다. 이 때에는 뷰모델 인스턴스가 새로 생성되지 않고 최초에 생성된 인스턴스를 제공한다.
+
+앱이 완전히 종료되면 뷰모델도 메모리에서 제거된다.
+
+## by 키워드
+
+by viewModel 키워드를 사용하면 ViewModelProvider를 사용하지 않고 뷰모델을 지연 생성할 수 있다.
+
+```Kotlin
+val imageViewModel: ImageViewModel by viewModels()
+```
+
+by 키워드를 통한 인스턴스 생성 방식을 위임 패턴이라고 한다.
+
+## 위임 패턴
+
+하위 클래스가 상위 클래스의 메소드 중 일부를 오버라이딩하면 하위 클래스는 상위 클래스의 세부 구현 사항에 의존하게 된다. 시스템이 변하면서 상위 클래스의 구현이 변경되거나 메소드가 추가될 수 있다. 하위 클래스에 오버라이딩된 코드에 오류가 발생할 수 있다.
+
+코틀린은 기본적으로 클래스가 final로 설정되어 상속을 할 수 없게 돼있다. 상속을 허용하지 않는 클래스에 새로운 동작을 추가하기 위해서 데코레이터 패턴을 사용할 수 있다.
+
+새로운 클래스를 생성한 뒤 기존 클래스의 인터페이스를 데코레이터가 제공하고 기존 클래스를 데코레이터 내부 필드로 유지하는 것이다. 다시 말해서, 새로 필요한 기능은 데코레이터 메소드에 새로 정의하고 기존 기능이 필요한 부분은 데코레이터의 함수가 기존 클래스의 함수에게 요청을 전달한다. 준비 코드를 작성해야 한다는 단점이 존재한다.
+
+인터페이스를 구현할 때 by 키워드를 사용하면 인터페이스에 대한 구현을 다른 객체에 위임 중이라는 걸 알려줄 수 있다.
+
+```Kotlin
+class Counter<T>(
+  val innerSet: MutableCollection<T> = HashSet<T>()
+): MutableCollection<T> by innerSet {
+
+  var objectsAdded = 0
+
+  override fun add(element: T): Boolean {
+    objectsAdded++
+    return innerSet.add(element)
+  }
+
+  override fun addAll(c: Collection<T>): Boolean {
+    objectsAdded += c.size
+    return innerSet.addAll(c)
+  }
+}
+```
+
+MutableCollection은 인터페이스이고 기존의 HashSet이 인터페이스를 구현한다. add, addAll을 오버라이딩해서 카운터, objectsAdded를 증가시킨다. 나머지 메소드는 innerSet에 전부 위임한다. MutableCollection에 대한 의존관계가 형성되지 않는 특징이 있다. Counter에서 함수가 실행되면 Counter 내부에서 처리할 수도 있고, 위임대상의 함수를 활용할 수도 있다. 중요한 점은 인터페이스의 구성이 변경되더라도 Counter의 코드는 잘 작동함을 보장할 수 있다.
+
+뷰모델을 선언할 때 by viewModels를 작성하면 현재 프래그먼트에 뷰모델 위임을 주입할 수 있다.
