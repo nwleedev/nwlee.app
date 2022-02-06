@@ -17,12 +17,12 @@ menu:
 ## 소개
 
 - 이름: 이노원
-- 깃허브 저장소: [https://github.com/nw-lee](https://github.com/nw-lee)
+- 깃허브 저장소: [https://github.com/quavious](https://github.com/quavious)
 - 블로그: [https://nwlee.app](https://nwlee.app)
 
 ## 현재 기술 스택
 
-- 언어: Typescript, Kotlin
+- 언어: Typescript
 - 도구: Visual Studio Code, Git, Github, Android Studio
   - 프론트엔드: React, Next JS, Tailwind CSS,
   - 안드로이드: Navigation, Safe Args, Retrofit2, Coroutine, Hilt
@@ -30,7 +30,33 @@ menu:
 
 ## 프로젝트 목록
 
-1. Koreanify
+1. Game Dictionary
+
+현재 운영되는 게임들을 나열해주고 검색할 수 있는 웹 애플리케이션
+
+- 제작 동기
+
+  - Twitch에서 제공하는 IGDB api로 전 세계인들에게 게임 정보 제공 목적
+
+- 프로젝트 기간
+
+  - 2022년 1월 26일 ~ 현재
+
+- 핵심 기술
+
+  - Next.js, Tailwind CSS
+
+- 내용
+
+  - 게임 장르, 테마, 검색어와 일치하는 게임 데이터 출력
+  - 페이지네이션 적용, 페이지에 따라 버튼 출력 유무 결정
+
+- 링크
+  - [깃허브 저장소 - 프론트엔드](https://github.com/quavious/game-dictionary-nextjs)
+  - [깃허브 저장소 - 백엔드 API](https://github.com/quavious/game-dictionary-api)
+  - [웹 주소](https://www.nwleegame.com/)
+
+2. Koreanify
 
 한국 내 여행지를 나열 및 소개해주는 안드로이드 애플리케이션
 
@@ -59,7 +85,7 @@ menu:
 - 링크
   - [구글 플레이](https://play.google.com/store/apps/details?id=com.nwlee.koreanify)
 
-2. Travelog
+3. Travelog
 
 여행지를 추천받거나 직접 검색하여 일정을 계획하고 여행 경험을 기록할 수 있는 안드로이드 애플리케이션
 
@@ -90,7 +116,7 @@ menu:
 - 링크
   - [깃허브 저장소](https://github.com/nw-lee/android10-Travelog)
 
-3. Too Much News
+4. Too Much News
 
 - 제작 동기
   - 사회에도 관심을 가지고 싶은데, 언론사가 너무 많아서 어떤 자료를 봐야 할지 모르는 상태.
@@ -113,7 +139,7 @@ menu:
   - [웹 사이트](https://nostalgic-jepsen-e4b338.netlify.app)
   - [깃허브 저장소](https://github.com/nw-lee/too-much-news)
 
-4. Banchan App: 반찬 웹 어플리케이션
+5. Banchan App: 반찬 웹 어플리케이션
 
 - 프로젝트 기간
   - 10월 24일 ~ 현재
@@ -133,7 +159,7 @@ menu:
   - [백엔드 깃허브 저장소](https://github.com/nw-lee/banchan-serverless-api)
   - [프론트엔드 깃허브 저장소](https://github.com/nw-lee/banchan-next)
 
-5. 과학 뉴스 모음
+6. 과학 뉴스 모음
 
 - 제작 동기
   - 과학 지식과 연구 소식에 대한 정보를 편하게 볼 수 있는 방법을 찾음
