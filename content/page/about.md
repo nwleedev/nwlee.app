@@ -25,7 +25,7 @@ menu:
 - 언어: Typescript
 - 도구: Visual Studio Code, Git, Github, Android Studio
   - 프론트엔드: React, Next JS, Tailwind CSS,
-  - 안드로이드: Navigation, Safe Args, Retrofit2, Coroutine, Hilt
+  - 안드로이드: Kotlin, Navigation, Safe Args, Retrofit2, Coroutine, Hilt
   - 기타: AWS Lambda, Serverless Framework
 
 ## 프로젝트 목록
