@@ -36,17 +36,18 @@ Parcel을 발견했고, 한번 사용해보기로 했다.
 
 ## 개발 환경 설정
 
-우선 yarn 또는 npm으로 Parcel을 전역적(Global)으로 설치한다. 여러 개의 프로젝트에 번들러를 사용할 수 있다. 그리고 노드 프로젝트를 하나 생성한다.
+npm 또는 yarn으로 parcel을 설치한다. 한국어 공식문서에서 볼 수 있는 parcel-bundler는 npm 페이지에서 사용하지 말라고 적혀있다. 그리고 노드 프로젝트를 하나 생성한다.
 
 ```PS
-npm install -g parcel-bundler
-
+yarn add parcel
 yarn init -y
 ```
 
 그 다음 번들러의 진입점이 될 수 있는 HTML 파일을 우선 하나 생성한다. 특이한 점은 HTML의 스크립트 태그에 타입스크립트 파일을 그대로 명시할 수 있다는 점이다.
 
 타입스크립트 개발할 때 추가 설정을 해주기 위해 tsconfig.json 파일을 생성했다. Parcel은 타입 검사를 따로 수행하지 않기 때문에 tsc --noEmit 명령어를 실행시켜 타입스크립트가 파일을 검사하게 할 수 있다. 컴파일러 옵션에서 noEmit 속성을 true로 설정하면 따로 --noEmit 태그를 달아줄 필요가 없다.
+
+Parcel은 각각의 파일을 개별적으로 처리한다. 컴파일러 옵션에서 isolatedModules 속성을 true로 설정해서 Parcel이 트랜스파일링하는 도중 오류가 발생하는 것을 방지한다. 이 속성을 true로 설정하면 개별 파일이 안전하게 트랜스파일링되는 것을 보장할 수 있다.
 
 ```PS
 yarn tsc --init
@@ -73,12 +74,13 @@ yarn tsc --init
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "isolatedModules": true
   }
 }
 ```
 
-public 폴더 내 index.html 파일이 있고, src 파일에 타입스크립트 파일이 있다.
+public 폴더 내 index.html 파일이 있고, src 파일에 타입스크립트 파일이 있다. HTML 파일 내 script 태그에 `type="module"` 속성을 명시한다.
 
 ```HTML
 <!-- public/index.html -->
@@ -91,7 +93,7 @@ public 폴더 내 index.html 파일이 있고, src 파일에 타입스크립트 
 </head>
 <body>
   <div id="root"></div>
-  <script src="../src/index.ts"></script>
+  <script type="module" src="../src/index.ts"></script>
 </body>
 </html>
 ```
@@ -156,3 +158,7 @@ Parcel은 여러 개의 단계에 걸쳐 실행된다.
 4. **Optimizing** 단계는 각 번들 파일의 내용물을 terser나 htmlnano 등으로 변환하는 과정이다. 이 단계가 종료되면 각 번들 파일의 해시를 결정하고 이는 곧 파일 이름에 반영된다. (이게 아마 Naming 과정으로 보인다.)
 
 5. **Compressing** 단계에서는 인코딩된 각각 아웃풋 파일을 파일 시스템에 저장한다.
+
+## 여담
+
+한국어 공식문서에는 Parcel을 사용하기 위해 parcel-bundler를 전역적(Global)으로 설치하라고 적혀있지만, npm 저장소 사이트에서는 이 패키지는 더 이상 사용하지 말 것을 알려주고 있다.
