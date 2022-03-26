@@ -30,7 +30,45 @@ menu:
 
 ## 프로젝트 목록
 
-1. Game Dictionary
+### Cat Everywhere
+
+웹에서 고양이를 데리고 나들이를 갈 수 있는 웹 애플리케이션
+
+- 제작 동기
+
+  - 고양이를 키울 형편이 되지 않는 사람들에게, 직접 키우는 대신 웹 상에서 고양이를 데리고 여행을 갈 수는 없을까라는 생각에서 프로젝트를 만들게 됨
+  - 웹 번들러 Parcel 사용법 ESLint Airbnb 스타일 설정 연습
+
+- 프로젝트 기간
+
+  - 2022년 3월 17일 ~ 현재 진행 중
+
+- 핵심 기술
+
+  - TypeScript
+  - React
+  - Parcel
+  - Redux Toolkit
+  - React-Redux
+  - Tailwind CSS
+  - ESLint, Prettier
+  - @googlemaps/react-wrapper
+
+- 내용
+
+  - 마우스로 고양이를 드래그 앤 드롭, 모바일에서도 가능
+  - 배경 이미지 변경
+  - 구글 지도 활용
+    - 지도 화면을 클릭 또는 터치하여 크로스헤어가 위치하는 좌표 변경
+    - 검색어를 입력하여 크로스헤어 근처 장소 검색
+  - PWA 적용, 예상하지 못한 스크롤 방지
+
+- 링크
+
+  - [Github 저장소](https://github.com/quavious/cat-everywhere)
+  - [배포 URL](https://cat-everywhere.netlify.app/)
+
+### Game Dictionary
 
 현재 운영되는 게임들을 나열해주고 검색할 수 있는 웹 애플리케이션
 
@@ -56,7 +94,7 @@ menu:
   - [깃허브 저장소 - 백엔드 API](https://github.com/quavious/game-dictionary-api)
   - [웹 주소](https://www.nwleegame.com/)
 
-2. Koreanify
+### Koreanify
 
 한국 내 여행지를 나열 및 소개해주는 안드로이드 애플리케이션
 
@@ -67,7 +105,7 @@ menu:
 
 - 프로젝트 기간
 
-  - 2021년 12월 13일 ~ 현재
+  - 2021년 12월 13일 ~ 2022년 2월 28일
 
 - 핵심 기술
 
@@ -85,7 +123,7 @@ menu:
 - 링크
   - [구글 플레이](https://play.google.com/store/apps/details?id=com.nwlee.koreanify)
 
-3. Travelog
+### Travelog
 
 여행지를 추천받거나 직접 검색하여 일정을 계획하고 여행 경험을 기록할 수 있는 안드로이드 애플리케이션
 
@@ -116,7 +154,7 @@ menu:
 - 링크
   - [깃허브 저장소](https://github.com/nw-lee/android10-Travelog)
 
-4. Too Much News
+### Too Much News
 
 - 제작 동기
   - 사회에도 관심을 가지고 싶은데, 언론사가 너무 많아서 어떤 자료를 봐야 할지 모르는 상태.
@@ -124,7 +162,7 @@ menu:
   - API 테스트 결과 여러가지 언론사에서 정보를 받아오는 것을 확인
   - 산업, 경제, 과학, 건강과 같은 다양한 카테고리 존재
 - 프로젝트 기간
-  - 11월 27일 ~ 현재
+  - 2021년 11월 27일 ~ 2022년 1월 31일
 - 핵심 기술
   - NextJS, Typescript, AWS Lambda, Serverless Framework
 - 내용
@@ -139,7 +177,7 @@ menu:
   - [웹 사이트](https://nostalgic-jepsen-e4b338.netlify.app)
   - [깃허브 저장소](https://github.com/nw-lee/too-much-news)
 
-5. Banchan App: 반찬 웹 어플리케이션
+### Banchan App: 반찬 웹 어플리케이션
 
 - 프로젝트 기간
   - 10월 24일 ~ 현재
@@ -159,7 +197,7 @@ menu:
   - [백엔드 깃허브 저장소](https://github.com/nw-lee/banchan-serverless-api)
   - [프론트엔드 깃허브 저장소](https://github.com/nw-lee/banchan-next)
 
-6. 과학 뉴스 모음
+### 과학 뉴스 모음
 
 - 제작 동기
   - 과학 지식과 연구 소식에 대한 정보를 편하게 볼 수 있는 방법을 찾음
