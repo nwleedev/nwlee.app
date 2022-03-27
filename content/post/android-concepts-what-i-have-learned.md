@@ -2,7 +2,7 @@
 title: '안드로이드 배운 내용 정리'
 description: '부스트캠프 기간 동안 안드로이드 프로그래밍에 대한 지식을 정리해놓은 글입니다.'
 date: 2022-01-02T21:11:03+09:00
-image: 'https://static.nwlee.app/public/KXWHM2O0/3f3c1f0d-51dc-4983-897b-4ba98cdbf438.jpeg'
+image: 'https://static.nwlee.com/public/KXWHM2O0/3f3c1f0d-51dc-4983-897b-4ba98cdbf438.jpeg'
 math:
 license:
 hidden: false

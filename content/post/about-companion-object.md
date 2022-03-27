@@ -2,7 +2,7 @@
 title: '동반 객체(Companion Object)에 대하여'
 description: 'DiffUtil에 동반 객체를 사용하면 안되는 이유를 알아보았습니다.'
 date: 2021-11-15T01:28:11+09:00
-image: 'https://static.nwlee.app/public/KVYH1C00/33653dea-cf90-418e-a3bd-ddd579416a0a.png'
+image: 'https://static.nwlee.com/public/KVYH1C00/33653dea-cf90-418e-a3bd-ddd579416a0a.png'
 math:
 license:
 hidden: false
@@ -153,4 +153,4 @@ fun main() {
 
 코틀린 제대로 작성하기도 벅찬데 언제쯤 자바까지 공부할 수 있을까?
 
-<img src="https://static.nwlee.app/public/KVYH1C00/cf945d93-8837-4bc8-9da3-3b624e907a12.jpeg" loading="lazy" >
+<img src="https://static.nwlee.com/public/KVYH1C00/cf945d93-8837-4bc8-9da3-3b624e907a12.jpeg" loading="lazy" >

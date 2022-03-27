@@ -2,7 +2,7 @@
 title: '타입스크립트 & 파셀 개발 환경 설정'
 description: '타입스크립트와 파셀(Parcel)로 웹 프론트엔드 개발 환경을 빠르게 구축할 수 있습니다.'
 date: 2022-03-09T00:06:19+09:00
-image: 'https://static.nwlee.app/public/L0HD8G00/d3e1a180-c24a-4243-a721-96bc623ccf98.png'
+image: 'https://static.nwlee.com/public/L0HD8G00/d3e1a180-c24a-4243-a721-96bc623ccf98.png'
 math:
 license:
 hidden: false
@@ -30,7 +30,7 @@ Parcel을 발견했고, 한번 사용해보기로 했다.
 
 개발 서버를 실행시켰을 때 사용자가 브라우저에서 특정 페이지를 요청할 때까지 그 페이지에 필요한 파일들을 빌드하는 과정을 지연시킨다고 적혀있다. 프로젝트에 많은 모듈이 작성되어 있어도 개발 서버가 작동하는 시간에는 큰 영향을 주지 않는다는 의미로 보인다. CommonJS 모듈과 ES 모듈 전부 지원한다.
 
-![Lazy Dev Builds](https://static.nwlee.app/public/L0HD8G00/d5b1de14-356f-4875-bc4e-81e68fb1d2db.png)
+![Lazy Dev Builds](https://static.nwlee.com/public/L0HD8G00/d5b1de14-356f-4875-bc4e-81e68fb1d2db.png)
 
 참고로 Parcel에는 한국인 개발자가 개발한 트랜스파일러 [SWC](https://swc.rs/)가 사용된다. SWC는 러스트(Rust) 언어로 작성되어 바벨보다 수십 배나 빠르다.
 
@@ -145,7 +145,7 @@ Browser API 학습 용도로 우연히 사용하게 된 거라 개인 프로젝�
 
 [영어 공식문서](https://parceljs.org/)가 더 내용이 알찬 편이다. 플러그인 시스템에 대해서는 언젠가 깊게 학습해 볼 필요가 있을 것 같다. 공식문서에서 플러그인 시스템에 대한 대략적인 구조를 파악할 수 있었다.
 
-![Parcel Plugin System](https://static.nwlee.app/public/L0HD8G00/0212a382-48fb-4464-8db5-67f5b0ea9d8d.png)
+![Parcel Plugin System](https://static.nwlee.com/public/L0HD8G00/0212a382-48fb-4464-8db5-67f5b0ea9d8d.png)
 
 Parcel은 여러 개의 단계에 걸쳐 실행된다.
 

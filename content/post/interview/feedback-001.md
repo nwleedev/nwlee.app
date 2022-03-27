@@ -2,7 +2,7 @@
 title: 'Feedback 001'
 description: '몰랐던 지식 정리'
 date: 2022-01-17T02:27:23+09:00
-image: 'https://static.nwlee.app/public/KYJCNPC0/99c37078-c839-4364-a91f-e8a0a8b2ce5d.jpeg'
+image: 'https://static.nwlee.com/public/KYJCNPC0/99c37078-c839-4364-a91f-e8a0a8b2ce5d.jpeg'
 math:
 license:
 hidden: false

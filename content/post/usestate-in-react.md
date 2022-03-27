@@ -2,7 +2,7 @@
 title: 'React의 useState 작동원리'
 description: 'React Hooks의 useState가 컴포넌트 내부에서 어떻게 작동하는지 파악해봤습니다.'
 date: 2022-03-15T12:42:05+09:00
-image: 'https://static.nwlee.app/public/L0RDBEO0/8bae5cf2-a727-4ea2-bb7d-2e1560e9c56f.png'
+image: 'https://static.nwlee.com/public/L0RDBEO0/8bae5cf2-a727-4ea2-bb7d-2e1560e9c56f.png'
 math:
 license:
 hidden: false

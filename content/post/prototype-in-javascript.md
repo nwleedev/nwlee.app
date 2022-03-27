@@ -2,7 +2,7 @@
 title: '자바스크립트 프로토타입 체인'
 description: '자바스크립트 프로토타입 개념에 대해서 정리했습니다.'
 date: 2022-03-14T19:22:51+09:00
-image: 'https://static.nwlee.app/public/L0PXVK00/6e31b167-bd80-4875-830b-9647a8f77853.png'
+image: 'https://static.nwlee.com/public/L0PXVK00/6e31b167-bd80-4875-830b-9647a8f77853.png'
 math:
 license:
 hidden: false
@@ -48,7 +48,7 @@ kim.sayHi()
 
 자바스크립트 콘솔에서 생성자 함수에서 선언 및 초기화된 객체에 점(.)을 찍으면 여러가지 속성이 뜨는 것을 볼 수 있다.
 
-<img src="https://static.nwlee.app/public/L0PXVK00/2259c4e4-57f5-403c-b5f2-76b51423f5d6.png" width="400" />
+<img src="https://static.nwlee.com/public/L0PXVK00/2259c4e4-57f5-403c-b5f2-76b51423f5d6.png" width="400" />
 
 Person 생성자 함수 내 속성과 메소드 외에도 constructor, hasOwnProperty, valueOf 등의 속성이 표시된다. 이 속성들도 전부 정상적으로 작동한다.
 
@@ -59,7 +59,7 @@ kim.hasOwnProperty("name")
 
 constructor, hasOwnProperty, valueOf 등등의 메소드는 Object에 정의된 메소드이다.
 
-<img src="https://static.nwlee.app/public/L0PXVK00/388df029-768a-4335-a9b7-d1a6f7d20efe.png" width="400" alt="Methods in Object">
+<img src="https://static.nwlee.com/public/L0PXVK00/388df029-768a-4335-a9b7-d1a6f7d20efe.png" width="400" alt="Methods in Object">
 
 Object에 정의되어 있는 메소드를 `kim`과 같은 객체에서 호출하는 과정은 다음과 같다.
 
@@ -73,9 +73,9 @@ Object에 정의되어 있는 메소드를 `kim`과 같은 객체에서 호출�
 
 Array, String, Date, Number와 같은 전역 객체도 Object의 프로토타입 객체에 정의된 메소드와 속성을 상속받는다.
 
-<img src="https://static.nwlee.app/public/L0PXVK00/9ce51734-905b-4c4b-8f65-012fb8b8c2c5.png" width="400" alt="내장 객체">
+<img src="https://static.nwlee.com/public/L0PXVK00/9ce51734-905b-4c4b-8f65-012fb8b8c2c5.png" width="400" alt="내장 객체">
 
-<img src="https://static.nwlee.app/public/L0PXVK00/4c0697da-e83a-481c-a332-0284dec8dd5f.png" width="400" alt="내장 객체 사례"/>
+<img src="https://static.nwlee.com/public/L0PXVK00/4c0697da-e83a-481c-a332-0284dec8dd5f.png" width="400" alt="내장 객체 사례"/>
 
 생성자 함수를 예측할 수 없는 경우 객체에서 constructor 메소드로 동일한 형태의 새로운 객체를 생성할 수 있다. constructor 속성은 원본 생성자 함수를 참조한다. constructor 메소드는 각 생성자 함수의 prototype 객체에 정의되어 있어서, 생성된 객체에서 해당 메소드를 호출할 수 있다.
 
@@ -134,7 +134,7 @@ Rect.prototype.constructor = Rect
 
 Object.prototype 객체에는 Object에서 상속할 메소드가 정의되어 있고, 객체는 프로토타입 객체를 상속받는다.
 
-<img src="https://static.nwlee.app/public/L0PXVK00/bbb185aa-823a-44d5-9021-f735c2a8e117.png" width="400" alt="객체 리터럴" />
+<img src="https://static.nwlee.com/public/L0PXVK00/bbb185aa-823a-44d5-9021-f735c2a8e117.png" width="400" alt="객체 리터럴" />
 
 ## 네이티브 프로토타입
 

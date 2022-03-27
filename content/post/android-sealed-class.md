@@ -2,7 +2,7 @@
 title: '안드로이드에서 뷰 홀더를 구분하기 위해 봉인 클래스 사용하기'
 description: '안드로이드 리사이클러 뷰에 여러가지의 항목을 나타내야 할 때 봉인 클래스를 사용할 수 있습니다.'
 date: 2022-01-03T12:12:59+09:00
-image: 'https://static.nwlee.app/public/KVYH1C00/33653dea-cf90-418e-a3bd-ddd579416a0a.png'
+image: 'https://static.nwlee.com/public/KVYH1C00/33653dea-cf90-418e-a3bd-ddd579416a0a.png'
 math:
 license:
 hidden: false

@@ -18,7 +18,7 @@ menu:
 
 - 이름: 이노원
 - 깃허브 저장소: [https://github.com/quavious](https://github.com/quavious)
-- 블로그: [https://nwlee.app](https://nwlee.app)
+- 블로그: [https://nwlee.com](https://nwlee.com)
 
 ## 현재 기술 스택
 
@@ -214,8 +214,8 @@ menu:
   - 적은 사용자수, 서버 운영 비용이 정기적으로 납부되어 현재 서버를 삭제한 상태
 - 첨부 이미지
   <p align="center">
-    <img src="https://static.nwlee.app/public/KVIR6YO0/1dabf146-b712-480b-9362-597d2218cb3d.jpeg" width="180" />
-    <img src="https://static.nwlee.app/public/KVIR6YO0/0802d2e6-433a-42e0-9133-1324a5f7836c.jpeg" width="180" />
+    <img src="https://static.nwlee.com/public/KVIR6YO0/1dabf146-b712-480b-9362-597d2218cb3d.jpeg" width="180" />
+    <img src="https://static.nwlee.com/public/KVIR6YO0/0802d2e6-433a-42e0-9133-1324a5f7836c.jpeg" width="180" />
   </p>
 
 ## 교육 이수 사항

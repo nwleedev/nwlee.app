@@ -1,4 +1,4 @@
-baseurl: https://nwlee.app
+baseurl: https://nwlee.com
 languageCode: ko-kr
 theme: stack
 paginate: 10
@@ -8,7 +8,7 @@ title: nw.lee blog
 # disqusShortname: hugo-theme-stack
 
 # GA Tracking ID
-googleAnalytics: G-5605DPKF35
+googleAnalytics: G-PEG1G0KY0K
 
 # Theme i18n support
 # Available values: en, fr, id, ja, ko, pt-br, zh-cn, es, de, nl, it

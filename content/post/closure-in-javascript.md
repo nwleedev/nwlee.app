@@ -2,7 +2,7 @@
 title: '자바스크립트 클로저'
 description: '자바스크립트에서 클로저가 도대체 무엇이고 어떤 역할을 하는지 작성해봤습니다.'
 date: 2022-03-22T00:48:17+09:00
-image: 'https://static.nwlee.app/public/L0ZXYIO0/b5bf5313-631a-4cfc-85aa-65bb993562a7.png'
+image: 'https://static.nwlee.com/public/L0ZXYIO0/b5bf5313-631a-4cfc-85aa-65bb993562a7.png'
 math:
 license:
 hidden: false

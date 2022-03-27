@@ -40,7 +40,7 @@ categories: ['피드백']
 
 다음과 같은 순서로 이루어진다.
 
-![프래그먼트 생명주기](https://static.nwlee.app/public/KYM7JEO0/a655fcfd-855e-42ec-bea3-2d5e4a1ecadb.png)
+![프래그먼트 생명주기](https://static.nwlee.com/public/KYM7JEO0/a655fcfd-855e-42ec-bea3-2d5e4a1ecadb.png)
 
 1. Fragment CREATED: 프래그먼트가 CREATED 상태가 되면 프래그먼트 매니저가 추가되고 onAttach 함수가 호출된다. onCreate 함수가 호출되면 SavedInstanceState Bundle 객체로부터 임시 저장된 데이터를 가져온다.
 2. Fragment CREATED and View INITIALIZED: 프래그먼트의 뷰 생명주기가 생성된다. onCreateView 함수를 호출하거나 Fragment 생성자에 레이아웃 아이디를 넘겨줌으로써 레이아웃을 인플레이팅할 수 있다. 뷰 객체는 getView 함수로 불러올 수 있다. onViewCreated 함수도 호출된다. 뷰에 대해 라이브데이터와 같은 초기 상태가 세팅된다.
@@ -99,7 +99,7 @@ categories: ['피드백']
 
 애플리케이션 클래스에 HiltAndroidApp 어노테이션을 명시함으로써 애플리케이션 레벨의 의존성 컨테이너 역할을 하게 한다. 이후 AndroidEntryPoint 어노테이션이 명시된 다른 안드로이드 클래스에 의존성 주입을 할 수 있다. 구성요소 계층 구조에 따라 각자의 상위 클래스에서 의존성 주입 객체를 받는다.
 
-![Hilt 계층 구조](https://static.nwlee.app/public/KYM7JEO0/7d9a22a9-1990-422d-b5f3-4ada346882ed.png)
+![Hilt 계층 구조](https://static.nwlee.com/public/KYM7JEO0/7d9a22a9-1990-422d-b5f3-4ada346882ed.png)
 
 클래스의 생성자에 Inject 주석으로 클래스를 제공하는 방법을 알려줄 수 있다. 주석이 지정된 매개변수는 클래스의 의존성 객체라고 할 수 있다.
 
