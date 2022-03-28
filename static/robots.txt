@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://nwlee.app/sitemap.xml
+Sitemap: http://nwlee.com/sitemap.xml
