@@ -54,14 +54,15 @@ menu:
   - ESLint, Prettier
   - @googlemaps/react-wrapper
 
-- 내용
+- 성과
 
-  - 마우스로 고양이를 드래그 앤 드롭, 모바일에서도 가능
-  - 배경 이미지 변경
-  - 구글 지도 활용
-    - 지도 화면을 클릭 또는 터치하여 크로스헤어가 위치하는 좌표 변경
-    - 검색어를 입력하여 크로스헤어 근처 장소 검색
-  - PWA 적용, 예상하지 못한 스크롤 방지
+  - 웹 번들러 Parcel로 리액트 프로젝트 환경 구성에 소요되는 시간을 줄이고 프로젝트 빌드 속도 향상.
+  - Redux Toolkit으로 브라우저 창에 떠 있는 고양이의 좌표를 전역적으로 관리. 페이지 이동해도 고양이 좌표 유지
+
+    - React-Redux의 useSelector, useDispatch Hooks
+
+  - PWA 적용하여 모바일 애플리케이션과 비슷한 사용자 경험 제공
+  - ESLint Airbnb 코드 스타일 적용
 
 - 링크
 
@@ -83,11 +84,22 @@ menu:
 - 핵심 기술
 
   - Next.js, Tailwind CSS
+  - Go, Heroku
 
-- 내용
+- 성과
 
-  - 게임 장르, 테마, 검색어와 일치하는 게임 데이터 출력
   - 페이지네이션 적용, 페이지에 따라 버튼 출력 유무 결정
+
+    - 1 페이지의 경우 "이전" 버튼을 비활성화, 특정 페이지에서 게임 데이터의 개수가 정해진 값 미만이면 마지막 페이지로 판단하여 "다음" 버튼 비활성화
+
+  - Go로 외부 API 데이터를 필터링, 일정 시간을 주기로 API 호출에 필요한 액세스 토큰 갱신.
+
+    - 클라이언트로부터 토큰을 은폐
+
+  - Heroku로 백엔드 API, Amplify Hosting으로 프론트엔드 배포 자동화
+
+    - Amplify Hosting는 Netlify, Vercel과 다르게 무료 계정의 제한이 없음
+    - 사용한 만큼 지불
 
 - 링크
   - [깃허브 저장소 - 프론트엔드](https://github.com/quavious/game-dictionary-nextjs)
@@ -166,12 +178,11 @@ menu:
 - 핵심 기술
   - NextJS, Typescript, AWS Lambda, Serverless Framework
 - 내용
-  - AWS Lambda에서 1시간마다 외부 API 호출하여 데이터를 수집
+
+  - AWS Lambda에서 1시간마다 외부 API 호출하여 데이터를 저장
+  - Serverless Framework로 AWS Lambda & API Gateway 기반 API 구축, 서버 비용 절감, 클라이언트로부터 액세스 토큰 은닉
   - 브라우저에서는 Lambda로 만들어진 API에서 수집된 데이터를 호출
-  - API에서 가져오는 데이터와 현재 출력되는 데이터가 달라지면 최신 데이터로 교체
-  - 각 이미지를 클릭하면 데이터를 로컬 스토리지에 저장한 다음 상세 페이지로 이동
-  - 상세 페이지에서 로컬 스토리지에 데이터가 있는지 검사
-  - 이미지를 그리드 형태로 배치하거나 마우스 스크롤이 올라가면 기사 제목이 표시되게 하는 등의 간단한 이벤트 처리
+
 - 참고 링크
 
   - [웹 사이트](https://nostalgic-jepsen-e4b338.netlify.app)
@@ -189,9 +200,8 @@ menu:
   - Typescript, Next JS, Tailwind CSS
   - Go, Serverless Framework, PostgreSQL
 - 내용
-  - 스크롤이 끝에 도달했을 때를 감지하여 API를 호출함으로써 일정한 개수의 데이터를 등록일 내림차순으로 렌더링
-  - 정기적으로 요금을 지불해야 하는 가상 머신과 다르게 사용자의 접속 횟수에 따라 요금이 지불되는 서버리스 환경의 API 구축
-  - 서버리스 프레임워크에서 제공하는 명령어로 복잡한 배포 과정 없이 API를 배포
+  - 스크롤이 끝에 도달했을 때를 감지하여 API를 호출함으로써 일정한 개수의 데이터를 등록일 내림차순으로 렌더
+  - Serverless Framework로 AWS Lambda & API Gateway 기반 API 구축 및 자동화 배포, 서버 운영 비용 절감
 - 참고 링크
   - [웹 사이트 주소](https://banchanapp.com)
   - [백엔드 깃허브 저장소](https://github.com/nw-lee/banchan-serverless-api)
